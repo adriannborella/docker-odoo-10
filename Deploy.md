@@ -1,0 +1,1 @@
+Se detallan los comandos para actualizar en producción
