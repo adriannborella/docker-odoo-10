@@ -9,7 +9,6 @@ services:
     ports:
       - "8069:8069"
     volumes:
-      - ./odoo:/home/app/odoo
       - ./config:/etc/odoo
       - ./amce_odoo:/home/app/addons
     stdin_open: true
