@@ -9,11 +9,12 @@ services:
     ports:
       - "8069:8069"
     volumes:
-      - ./config:/etc/odoo
-      - ./amce_odoo:/home/app/addons
+      - ./config:/home/app/config
+      - ./custom-addons:/home/app/addons
     stdin_open: true
+    command: odoo -c /home/app/config/odoo_develop.conf
   db:
-    image: postgres:10
+    image: postgres:11
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_PASSWORD=odoo
