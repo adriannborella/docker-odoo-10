@@ -33,7 +33,7 @@ RUN git clone --depth=1 --branch=10.0 https://github.com/odoo/odoo.git $APP_HOME
 
 WORKDIR $APP_HOME
 
-COPY ./config/odoo.conf /home/app/.odoorc
+COPY ./config/odoo_develop.conf /home/app/.odoorc
 
 RUN pip install -r requirements.txt
 
